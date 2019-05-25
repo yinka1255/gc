@@ -18,9 +18,25 @@
 		<!-- Header of the page -->
 		<header id="header" class="v1">
 			<!-- Header holder of the page -->
+			<!-- Header holder of the page -->
+			<div class="header-holder bg-light">
+				<div class="container-fluid">
+					<!-- Setting Wrap of the page -->
+					<ul class="list-unstyled setting-wrap pull-left">
+						<li><a href="javascript:void(0);" style="color:#a53e4c" class="nav-opener visible-xs hidden"><i class="fa fa-bars"></i></a></li>
+						<li>
+							<a style="color:#a53e4c" href="{{url('cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="num round fontjosefin text-center">{{Cart::count()}}</span></a>
+						</li>
+					</ul>
+					<div class="logo">
+						<a href="{{url('/')}}"><img src="images/logo.png" alt="Vine Yard" class="img-responsive"></a>
+					</div>
+				</div>
+			</div>
+			<div class="bdr-bt">
 			<div class="bdr-bt">
 				<!-- nav holder of the page -->
-				<div class="nav-holder container">
+				<div class="nav-holder">
 					<div class="row">
 						<div class="col-xs-12">
 							<!-- Nav of the page -->
@@ -71,7 +87,7 @@
 				<!-- slide of the page -->
 				<div class="slide bg-full" style="background-image:url({{asset('public/images/slider1.jpg')}});">
 					<div class="holder">
-						<div class="b-logo" style="margin-top: -250px;width: 400px;">
+						<div class="b-logo" style="width: 350px;">
 							<h2 style="color: #fff;">Enjoy 15 min delivery when you order through us</h2>
 						</div>
 						<a href="#shop" class="btn-primary active lg-round text-uppercase">shop now</a>
@@ -80,7 +96,7 @@
 				<!-- slide of the page -->
 				<div class="slide bg-full" style="background-image:url({{asset('public/images/slider2.jpg')}});">
 					<div class="holder">
-						<div class="b-logo" style="margin-top: -250px;width: 400px;">
+						<div class="b-logo" style="width: 350px;">
 								<h2 style="color: #fff;">Enjoy 15 min delivery when you order through us</h2>
 						</div>
 						<a href="#shop" class="btn-primary active lg-round text-uppercase">shop now</a>

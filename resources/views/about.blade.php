@@ -9,74 +9,89 @@
 	<div id="wrapper">
 		<!-- header of the page -->
 		<header id="header" class="wh-clr">
-			
-			<!-- nav holder of the page -->
-			<div class="nav-holder container">
-				<div class="row">
-					<div class="col-xs-12">
-						<nav id="nav">
-							<ul class="list-unstyled text-center">
-								<li class="n-logo"><a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="Vine Yard" class="img-responsive"></a></li>
-								<li><a href="{{url('/')}}">Shop</a></li>
-								<!-- dropdownfull of the page -->
-								<li class="active">
-									<a href="{{url('about')}}">About us</a>
-								</li>
-								<!-- dropdown of the page -->
-								<li>
-									<a href="{{url('terms')}}">Terms & conditions</a>
-								</li>
-								
-								<li><a href="{{url('contact')}}">Contact</a></li>
-								<li>
-									<a href="{{url('cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="num round fontjosefin text-center">{{Cart::count()}}</span></a>
-									<!-- Cart Dropdown of the page -->
-									<div class="cart-dropdown right">
-										<!-- Cart Menu of the page -->
-										<ul class="list-unstyled cart-menu">
-											<li>
-												<div class="img-holder bdr pull-left">
-													<a href="shopping-cart.html"><img src="https://via.placeholder.com/25x95" alt="image description" class="img-responsive"></a>
-												</div>
-												<div class="align-left pull-left">
-													<h3 class="heading3"><a href="shopping-cart.html">Strawberry</a></h3>
-													<span class="price clr">1 x $146.00</span>
-													<a href="javascript:void(0);" class="close"><i class="fa fa-times"></i></a>
-												</div>
-											</li>
-											<li>
-												<div class="img-holder bdr pull-left">
-													<a href="shopping-cart.html"><img src="https://via.placeholder.com/25x95" alt="image description" class="img-responsive"></a>
-												</div>
-												<div class="align-left pull-left">
-													<h3 class="heading3"><a href="shopping-cart.html">Strawberry</a></h3>
-													<span class="price clr">1 x $146.00</span>
-													<a href="javascript:void(0);" class="close"><i class="fa fa-times"></i></a>
-												</div>
-											</li>
-											<li>
-												<div class="img-holder bdr pull-left">
-													<a href="shopping-cart.html"><img src="https://via.placeholder.com/25x95" alt="image description" class="img-responsive"></a>
-												</div>
-												<div class="align-left pull-left">
-													<h3 class="heading3"><a href="shopping-cart.html">Strawberry</a></h3>
-													<span class="price clr">1 x $146.00</span>
-													<a href="javascript:void(0);" class="close"><i class="fa fa-times"></i></a>
-												</div>
-											</li>
-											<li class="total-price text-uppercase">
-												total:
-												<em class="price clr fwBold pull-right">$168.00</em>
-											</li>
-											<li>
-												<a href="shopping-cart.html" class="btn-primary active text-center text-uppercase lg-round">View Card</a>
-												<a href="checkout.html" class="btn-primary lg-round text-center text-uppercase">Check Out</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
+			<div class="header-holder bg-light">
+				<div class="container-fluid">
+					<!-- Setting Wrap of the page -->
+					<ul class="list-unstyled setting-wrap pull-left">
+						<li><a href="javascript:void(0);" style="color:#a53e4c;" class="nav-opener visible-xs hidden"><i class="fa fa-bars"></i></a></li>
+						<li>
+							<a  style="color:#a53e4c;" href="{{url('cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="num round fontjosefin text-center">{{Cart::count()}}</span></a>
+						</li>
+					</ul>
+					<div class="logo">
+						<a href="{{url('/')}}"><img src="images/logo.png" alt="Vine Yard" class="img-responsive"></a>
+					</div>
+				</div>
+			</div>
+			<div class="bdr-bt">
+				<!-- nav holder of the page -->
+				<div class="nav-holder container">
+					<div class="row">
+						<div class="col-xs-12">
+							<nav id="nav">
+								<ul class="list-unstyled text-center">
+									<li class="n-logo"><a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="Vine Yard" class="img-responsive"></a></li>
+									<li><a href="{{url('/')}}">Shop</a></li>
+									<!-- dropdownfull of the page -->
+									<li class="active">
+										<a href="{{url('about')}}">About us</a>
+									</li>
+									<!-- dropdown of the page -->
+									<li>
+										<a href="{{url('terms')}}">Terms & conditions</a>
+									</li>
+									
+									<li><a href="{{url('contact')}}">Contact</a></li>
+									<li>
+										<a href="{{url('cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="num round fontjosefin text-center">{{Cart::count()}}</span></a>
+										<!-- Cart Dropdown of the page -->
+										<div class="cart-dropdown right">
+											<!-- Cart Menu of the page -->
+											<ul class="list-unstyled cart-menu">
+												<li>
+													<div class="img-holder bdr pull-left">
+														<a href="shopping-cart.html"><img src="https://via.placeholder.com/25x95" alt="image description" class="img-responsive"></a>
+													</div>
+													<div class="align-left pull-left">
+														<h3 class="heading3"><a href="shopping-cart.html">Strawberry</a></h3>
+														<span class="price clr">1 x $146.00</span>
+														<a href="javascript:void(0);" class="close"><i class="fa fa-times"></i></a>
+													</div>
+												</li>
+												<li>
+													<div class="img-holder bdr pull-left">
+														<a href="shopping-cart.html"><img src="https://via.placeholder.com/25x95" alt="image description" class="img-responsive"></a>
+													</div>
+													<div class="align-left pull-left">
+														<h3 class="heading3"><a href="shopping-cart.html">Strawberry</a></h3>
+														<span class="price clr">1 x $146.00</span>
+														<a href="javascript:void(0);" class="close"><i class="fa fa-times"></i></a>
+													</div>
+												</li>
+												<li>
+													<div class="img-holder bdr pull-left">
+														<a href="shopping-cart.html"><img src="https://via.placeholder.com/25x95" alt="image description" class="img-responsive"></a>
+													</div>
+													<div class="align-left pull-left">
+														<h3 class="heading3"><a href="shopping-cart.html">Strawberry</a></h3>
+														<span class="price clr">1 x $146.00</span>
+														<a href="javascript:void(0);" class="close"><i class="fa fa-times"></i></a>
+													</div>
+												</li>
+												<li class="total-price text-uppercase">
+													total:
+													<em class="price clr fwBold pull-right">$168.00</em>
+												</li>
+												<li>
+													<a href="shopping-cart.html" class="btn-primary active text-center text-uppercase lg-round">View Card</a>
+													<a href="checkout.html" class="btn-primary lg-round text-center text-uppercase">Check Out</a>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</nav>
+						</div>
 					</div>
 				</div>
 			</div>
