@@ -25,7 +25,7 @@
 						<nav id="nav">
 							<ul class="list-unstyled text-center">
 								<li class="n-logo"><a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="Vine Yard" class="img-responsive"></a></li>
-								<li><a href="{{url('/')}}">Home</a></li>
+								<li><a href="{{url('/')}}">Shop</a></li>
 								<!-- dropdownfull of the page -->
 								<li>
 									<a href="{{url('about')}}">About us</a>
@@ -115,7 +115,7 @@
 						<div class="col-xs-12 text-center">
 							<h2 class="heading text-uppercase fwLight">Checkout</h2>
 							<ul class="list-unstyled breadcrumbs">
-								<li><a {{url('/')}}>Home</a></li>
+								<li><a {{url('/')}}>Shop</a></li>
 								<li>/</li>
 								<li>Checkout</li>
 							</ul>
@@ -183,11 +183,12 @@
 									<label class="text-uppercase">CVV</label>
 									<input class="form-control" placeholder="CVC" required type="number" name="cvv" maxlength="3">
 								</div>
+								{{--
 								<div class="form-group">
 									<label class="text-uppercase">PIN</label>
 									<input class="form-control" type="tel" required name="pin" maxlength="4" >
 								</div>
-
+								--}}
 								<div class="form-group wrap2">
 									<label class="text-uppercase">ORDER NOTES</label>
 									<textarea class="form-control" name="note"></textarea>
@@ -219,8 +220,10 @@
 							<ul class="list-unstyled cart-totel">
 								<li class="text-uppercase">product<span class="titles pull-right">total</strong></li>
 								@foreach(Cart::content() as $cart) 
-								<li>{{$cart->name}}<strong class="heading2 pull-right">₦{{$cart->price}}</strong></li>
+								<li>{{$cart->name}} X <strong>{{$cart->qty}}</strong><strong class="heading2 pull-right">₦{{$cart->price}}</strong></li>
 								@endforeach
+								<li>Delivery<strong class="heading2 pull-right">₦300.00</strong></li>
+								<li>Grand total<strong class="heading2 pull-right">₦{{number_format(str_replace(',', '', Cart::subtotal()) + 300)}}.00</strong></li>
 							</ul>
 						</div>
 						

@@ -17,7 +17,7 @@
 						<nav id="nav">
 							<ul class="list-unstyled text-center">
 								<li class="n-logo"><a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="Vine Yard" class="img-responsive"></a></li>
-								<li><a href="{{url('/')}}">Home</a></li>
+								<li><a href="{{url('/')}}">Shop</a></li>
 								<!-- dropdownfull of the page -->
 								<li>
 									<a href="{{url('about')}}">About us</a>
@@ -107,7 +107,7 @@
 						<div class="col-xs-12 text-center">
 							<h2 class="heading text-uppercase fwLight">Cart</h2>
 							<ul class="list-unstyled breadcrumbs">
-								<li><a {{url('/')}}>Home</a></li>
+								<li><a {{url('/')}}>Shop</a></li>
 								<li>/</li>
 								<li>Cart</li>
 							</ul>
@@ -139,7 +139,7 @@
 									<tr>
 										<td>
 											<div class="product-img">
-												<img src="https://via.placeholder.com/25x95" alt="image-description" class="img-responsive">
+												<img src="{{asset('public/images/'.$cart->options->image)}}" alt="image-description" class="img-responsive">
 											</div>
 										</td>
 										<td>
@@ -150,7 +150,7 @@
 										</td>
 										<td class="price fwBold">₦{{$cart->price}}</td>
 										<td>	
-											<input type="text" pattern="\d*" value="{{$cart->qty}}" onkeyup='updateCart(this.value, "{{$cart->rowId}}")'>
+											<input type="text" pattern="^\d+$" value="{{$cart->qty}}" onkeyup='updateCart(this.value, "{{$cart->rowId}}")'>
 										</td>
 										<td class="wrap">
 											<span class="price pull-left fwBold">₦{{$cart->subtotal}}</span>
@@ -173,7 +173,9 @@
 				<div class="col-xs-12 col-sm-4 cart-widget text-center">
 					<h3 class="heading3 text-uppercase">CART TOTAL</h3>
 					<ul class="list-unstyled cart-totel text-uppercase">
-						<li>grand total: <strong class="heading2">₦{{Cart::subtotal()}}</strong></li>
+						<li>Delivery: <strong class="heading2">₦300</strong></li>
+						<li>Sub total : <strong class="heading2">₦{{Cart::subtotal()}}</strong></li>
+						<li>grand total: <strong class="heading2">₦{{number_format(str_replace(',', '', Cart::subtotal()) + 300)}}.00</strong></li>
 					</ul>
 					<a href="{{url('checkout')}}" class="btn-primary active text-center text-uppercase lg-round">proceed to checkout</a>
 				</div>

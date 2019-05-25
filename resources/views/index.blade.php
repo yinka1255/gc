@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 	@include("includes.header")
-	<title>Food15 | 15 mins delivery to Lekki, VI, Ikoyi</title>
-	
+	<title>Food15 | 15 mins delivery to Lekki, VI, Ikoyi, Ajah, Surulere</title>
+
+	<meta name="description" content="It takes us only 15 mins to deliver your food to Lekki, VI, Ikoyi, Ikate, VGC, Ajah, Surulere, Lagos Island">
+	<style>
+		info-div{
+			height: 110px;
+			display: block;
+			overflow: hidden;
+		}
+	</style>
 </head>
 <body>
 	<!-- main container of all the page elements -->
@@ -18,8 +26,8 @@
 							<!-- Nav of the page -->
 							<nav id="nav">
 								<ul class="list-unstyled text-center">
-									<li class="n-logo"><a href="{{url('/')}}"><img src="images/logo.png" alt="Vine Yard" class="img-responsive"></a></li>
-									<li class="active"><a href="{{url('/')}}">Home</a></li>
+									<li class="logo"><a style="padding-bottom: 0 !important;" href="{{url('/')}}"><img style="height: 75px;" src="{{asset('public/images/logo.png')}}" alt="Vine Yard" class="img-responsive"></a></li>
+									<li class="active"><a href="{{url('/')}}">Shop</a></li>
 									<!-- dropdownfull of the page -->
 									<li class="l">
 										<a href="{{url('about')}}">About us</a>
@@ -63,19 +71,19 @@
 				<!-- slide of the page -->
 				<div class="slide bg-full" style="background-image:url({{asset('public/images/slider1.jpg')}});">
 					<div class="holder">
-						<div class="b-logo">
-							<img src="images/logo4.png" class="img-responsive" alt="banner-logo">
+						<div class="b-logo" style="margin-top: -250px;width: 400px;">
+							<h2 style="color: #fff;">Enjoy 15 min delivery when you order through us</h2>
 						</div>
-						<a href="javascript:void(0);" class="btn-primary active lg-round text-uppercase">show now</a>
+						<a href="#shop" class="btn-primary active lg-round text-uppercase">shop now</a>
 					</div>
 				</div>
 				<!-- slide of the page -->
 				<div class="slide bg-full" style="background-image:url({{asset('public/images/slider2.jpg')}});">
 					<div class="holder">
-						<div class="b-logo">
-							<img src="images/logo4.png" class="img-responsive" alt="banner-logo">
+						<div class="b-logo" style="margin-top: -250px;width: 400px;">
+								<h2 style="color: #fff;">Enjoy 15 min delivery when you order through us</h2>
 						</div>
-						<a href="javascript:void(0);" class="btn-primary active lg-round text-uppercase">show now</a>
+						<a href="#shop" class="btn-primary active lg-round text-uppercase">shop now</a>
 					</div>
 				</div>
 			</div>
@@ -123,7 +131,7 @@
 				</div>
 			</section>
 			<!-- feature sec of the page -->
-			<div class="feature-sec container">
+			<div class="feature-sec container" id="shop">
 				<div class="row">
 					<!-- header of the page -->
 					<header class="col-xs-12 text-center header wow fadeInUp" data-wow-delay="0.4s">
@@ -144,12 +152,12 @@
 						@foreach ($products as $product)
 						<div class="col-xs-12 col-sm-6 col-md-3 item-col roes">
 							<!-- feature col of the page -->
-							<a href="{{url('add_to_cart/'.$product->id.'/'.str_replace(' ', '_', $product->name).'/1/'.$product->price)}}" >
+							<a href="{{url('add_to_cart/'.$product->id.'/'.str_replace(' ', '_', $product->name).'/1/'.$product->image.'/'.$product->price)}}" >
 								<div class="feature-col">
 									<div class="img-holder text-center">
 										<img src="{{asset("public/images/".$product->image)}}" alt="image description" class="img-responsive">
 									</div>
-									<div class="">
+									<div class="info-div" >
 										<h2 class="heading3">{{$product->name}}</h2>
 										<footer class="footer">
 											<ul class="list-unstyled rating-list pull-left">

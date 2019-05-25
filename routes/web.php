@@ -18,12 +18,13 @@ Route::get('/contact', 'UsersController@contact');
 Route::get('/terms', 'UsersController@terms');
 Route::get('/privacy', 'UsersController@privacy');
 Route::get('/cart', 'UsersController@cart');
-Route::get('/add_to_cart/{id}/{name}/{quantity}/{price}', 'UsersController@addToCart');
+Route::get('/add_to_cart/{id}/{name}/{quantity}/{image}/{price}', 'UsersController@addToCart');
 Route::get('/delete_item_cart/{rowId}', 'UsersController@deleteFromCart');
 Route::get('/checkout', 'UsersController@checkout');
 
 Route::post('/update_cart', 'UsersController@updateCart');
 Route::post('/order', 'UsersController@orderPost');
+
 // Route::get('login', function () {
 //     return view('login');
 // });

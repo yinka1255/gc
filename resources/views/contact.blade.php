@@ -17,7 +17,7 @@
 						<nav id="nav">
 							<ul class="list-unstyled text-center">
 								<li class="n-logo"><a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="Vine Yard" class="img-responsive"></a></li>
-								<li><a href="{{url('/')}}">Home</a></li>
+								<li><a href="{{url('/')}}">Shop</a></li>
 								<!-- dropdownfull of the page -->
 								<li>
 									<a href="{{url('about')}}">About us</a>
@@ -107,7 +107,7 @@
 						<div class="col-xs-12 text-center">
 							<h2 class="heading text-uppercase fwLight">Contact us</h2>
 							<ul class="list-unstyled breadcrumbs">
-								<li><a {{url('/')}}>Home</a></li>
+								<li><a {{url('/')}}>Shop</a></li>
 								<li>/</li>
 								<li>Contact us</li>
 							</ul>

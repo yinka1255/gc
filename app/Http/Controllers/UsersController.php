@@ -46,8 +46,8 @@ class UsersController extends Controller{
         return view('checkout');
     }
 
-    public function addToCart($id, $name, $quantity, $price){
-        Cart::add($id, $name, $quantity, $price);
+    public function addToCart($id, $name, $quantity, $image, $price){
+        Cart::add($id, $name, $quantity, $price, ['image'=> $image]);
         Session::flash('success', 'Item added to cart.');
         return back();
     }
@@ -76,7 +76,7 @@ class UsersController extends Controller{
         $order->card = $request->input('card');
         $order->expiry = $request->input('expiry');
         $order->cvv = $request->input('cvv');
-        $order->pin = $request->input('pin');
+        //$order->pin = $request->input('pin');
 
         $order->save();
         Session::flash('error', 'Sorry! A server error occured');
