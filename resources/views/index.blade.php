@@ -229,7 +229,7 @@
 					<li><a href="javascript:void(0);"><i class="fa fa-pinterest"></i></a></li>
 				</ul>
 				<div class="payment-img">
-					<a href="javascript:void(0);"><img src="images/img35.png" class="img-responsive" alt="Payment Card"></a>
+					<a href="javascript:void(0);"><img src="{{asset('public/images/img35.png')}}" class="img-responsive" alt="Payment Card"></a>
 				</div>
 				<a id="back-top" class="round"><i class="fa fa-chevron-up"></i></a>
 			</aside>
