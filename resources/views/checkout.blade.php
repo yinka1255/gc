@@ -184,7 +184,7 @@
 								</div>
 								<div class="form-group">
 									<label class="text-uppercase">CARD NUMBER</label>
-									<input class="form-control cc-number amex" name="card" required type="text" pattern="\d*" x-autocompletetype="cc-number" placeholder="Card number">
+									<input class="form-control cc-number amex" name="card" required type="text" x-autocompletetype="cc-number" placeholder="Card number">
 								</div>
 								<div class="form-group">
 									<label class="text-uppercase">NAME ON CARD</label>
