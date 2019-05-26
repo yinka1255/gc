@@ -32,6 +32,7 @@
     <link rel="stylesheet" href="{{asset('public/css/colors.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
     
+    <meta name="google-site-verification" content="gLG6meoaI5A-6u3j7YGZugDStbVXXWP6HMlmndgIk00" />
     
     <script src="{{asset('public/admin/node_modules/jquery/jquery-3.2.1.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
