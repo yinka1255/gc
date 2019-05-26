@@ -593,6 +593,12 @@ button.active {
   padding: 44px 61px 43px;
 }
 
+@media only screen and (min-width: 450px) {
+  #header .header-holder {
+    display: none;
+  }
+}
+
 #header .v2 .setting-wrap {
   border-left: 1px solid #e5e5e5;
   margin: 0 0 0 39px;
