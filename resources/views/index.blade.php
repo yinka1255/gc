@@ -203,7 +203,7 @@
 								<span class="title fontpinyon">Deal Of Week</span>
 								<h2 class="heading text-uppercase">Dominos Pizza Buy 1 get 1 free</h2>
 								<div class="header-img">
-									<img src="images/bdr-img.png" class="img-responsive" class="">
+									<img src="{{asset('public/images/bdr-img.png')}}" class="img-responsive" class="">
 								</div>
 								<p>World's largest & best pizza in Nigeria! Delivering hot, fresh pizzas to your doorstep within 15mins in Lekki, VI, IKOYI, Ikate, Ajah, VGC and Surulere. You pay for one while we deliver two to you </p>
 							</header>
