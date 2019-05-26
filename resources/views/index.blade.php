@@ -29,7 +29,7 @@
 						</li>
 					</ul>
 					<div class="logo">
-						<a href="{{url('/')}}"><img src="images/logo.png" alt="Vine Yard" class="img-responsive"></a>
+						<a href="{{url('/')}}"><img src="{{asset('public/images/logo.png')}}" alt="Vine Yard" class="img-responsive"></a>
 					</div>
 				</div>
 			</div>
@@ -118,11 +118,11 @@
 								<span class="title fontpinyon">Welcome</span>
 								<h1 class="heading text-uppercase">food15</h1>
 								<div class="header-img">
-									<img src="images/bdr-img.png" alt="image description" class="img-respnsive">
+									<img src="{{asset('public/images/bdr-img.png')}}" alt="image description" class="img-respnsive">
 								</div>
 								<p>Food 15 is the most convenient online food ordering site, delivering food to people in lekki, VI, and Ikoyi within 15 minutes. We believe food is a pleasure and food ordering should be fast and definitely fun experience.</p>
 							</header>
-							<span class="signature-image"><img src="images/sign.png" class="img-responsive" alt="Signature"></span>
+							<span class="signature-image"><img src="{{asset('public/images/sign.png')}}" class="img-responsive" alt="Signature"></span>
 						</div>
 					</div>
 					<div class="row contact-holder">
@@ -154,7 +154,7 @@
 						<span class="title fontpinyon">food15</span>
 						<h1 class="heading text-uppercase">FEATURED DELICACIES</h1>
 						<div class="header-img">
-							<img src="images/bdr-img.png" alt="image description" class="img-responsive">
+							<img src="{{asset('public/images/bdr-img.png')}}" alt="image description" class="img-responsive">
 						</div>
 					</header>
 				</div>
@@ -239,7 +239,7 @@
 					<div class="row mar-bt">
 						<div class="col-xs-12 col-sm-6 col-md-4">
 							<div class="logo">
-								<a {{url('/')}}><img class="img-responsive" src="images/logo.png" alt="food15" ></a>
+								<a {{url('/')}}><img class="img-responsive" src="{{asset('public/images/logo.png')}}" alt="food15" ></a>
 							</div>
 							<!-- contact list of the page -->
 							<ul class="list-unstyled contact-list">
