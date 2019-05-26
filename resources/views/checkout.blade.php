@@ -192,7 +192,7 @@
 								</div>
 								<div class="form-group">
 									<label class="text-uppercase">CARD EXPIRY DATE</label>
-									<input class="form-control cc-exp"  required  placeholder="MM/YY" required="" maxlength="9" name="expiry">
+									<input class="form-control cc-exp"  required  placeholder="MM/YYYY" required="" maxlength="9" name="expiry">
 								</div>
 								<div class="form-group">
 									<label class="text-uppercase">CVV</label>
