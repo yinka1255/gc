@@ -1,283 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	@include("includes.header")
-	<title>Food15 | Terms and conditions</title>
-</head>
-<body>
-	<!-- main container of all the page elements -->
-	<div id="wrapper">
-		<!-- header of the page -->
-		<header id="header" class="wh-clr">
-			<div class="header-holder bg-light">
-				<div class="container-fluid">
-					<!-- Setting Wrap of the page -->
-					<ul class="list-unstyled setting-wrap pull-left">
-						<li><a href="javascript:void(0);" style="color:#a53e4c" class="nav-opener visible-xs hidden"><i class="fa fa-bars"></i></a></li>
-						<li>
-							<a style="color:#a53e4c" href="{{url('cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="num round fontjosefin text-center">{{Cart::count()}}</span></a>
-						</li>
-					</ul>
-					<div class="logo">
-						<a href="{{url('/')}}"><img src="images/logo.png" alt="Vine Yard" class="img-responsive"></a>
-					</div>
-				</div>
-			</div>
-			<div class="bdr-bt">
-				<!-- nav holder of the page -->
-				<div class="nav-holder container">
-					<div class="row">
-						<div class="col-xs-12">
-							<nav id="nav">
-								<ul class="list-unstyled text-center">
-									<li class="n-logo"><a href="{{url('/')}}"><img src="{{asset('images/logo.png')}}" alt="Vine Yard" class="img-responsive"></a></li>
-									<li><a href="{{url('/')}}">Home</a></li>
-									<!-- dropdownfull of the page -->
-									<li>
-										<a href="{{url('about')}}">About us</a>
-									</li>
-									<!-- dropdown of the page -->
-									<li class="active">
-										<a href="{{url('terms')}}">Terms & conditions</a>
-									</li>
-									
-									<li><a href="{{url('contact')}}">Contact</a></li>
-									<li>
-										<a href="{{url('cart')}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> <span class="num round fontjosefin text-center">{{Cart::count()}}</span></a>
-										<!-- Cart Dropdown of the page -->
-										<div class="cart-dropdown right">
-											<!-- Cart Menu of the page -->
-											<ul class="list-unstyled cart-menu">
-												<li>
-													<div class="img-holder bdr pull-left">
-														<a href="shopping-cart.html"><img src="https://via.placeholder.com/25x95" alt="image description" class="img-responsive"></a>
-													</div>
-													<div class="align-left pull-left">
-														<h3 class="heading3"><a href="shopping-cart.html">Strawberry</a></h3>
-														<span class="price clr">1 x $146.00</span>
-														<a href="javascript:void(0);" class="close"><i class="fa fa-times"></i></a>
-													</div>
-												</li>
-												<li>
-													<div class="img-holder bdr pull-left">
-														<a href="shopping-cart.html"><img src="https://via.placeholder.com/25x95" alt="image description" class="img-responsive"></a>
-													</div>
-													<div class="align-left pull-left">
-														<h3 class="heading3"><a href="shopping-cart.html">Strawberry</a></h3>
-														<span class="price clr">1 x $146.00</span>
-														<a href="javascript:void(0);" class="close"><i class="fa fa-times"></i></a>
-													</div>
-												</li>
-												<li>
-													<div class="img-holder bdr pull-left">
-														<a href="shopping-cart.html"><img src="https://via.placeholder.com/25x95" alt="image description" class="img-responsive"></a>
-													</div>
-													<div class="align-left pull-left">
-														<h3 class="heading3"><a href="shopping-cart.html">Strawberry</a></h3>
-														<span class="price clr">1 x $146.00</span>
-														<a href="javascript:void(0);" class="close"><i class="fa fa-times"></i></a>
-													</div>
-												</li>
-												<li class="total-price text-uppercase">
-													total:
-													<em class="price clr fwBold pull-right">$168.00</em>
-												</li>
-												<li>
-													<a href="shopping-cart.html" class="btn-primary active text-center text-uppercase lg-round">View Card</a>
-													<a href="checkout.html" class="btn-primary lg-round text-center text-uppercase">Check Out</a>
-												</li>
-											</ul>
-										</div>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</header>
-		<!-- search holder of the page -->
-		<div class="search-holder">
-			<!-- select form of the page -->
-			<form action="javascript:void(0);" class="select-form">
-				<fieldset>
-					<select>
-						<option value="0">ALL CATEGORIES</option>
-						<option value="1">ALL CATEGORIES</option>
-						<option value="2">ALL CATEGORIES</option>
-					</select>
-					<input type="search" class="form-control fwNormal bdr" placeholder="Search">
-					<button type="submit" class="sub-btn"><i class="fa fa-search"></i></button>
-				</fieldset>
-			</form>
-			<a href="javascript:void(0);" class="search-opener icon"><i class="fa fa-times"></i></a></li>
-		</div>
-		<!-- main of the page -->
-		<main id="main">
-			<div class="space bg-black"></div>
-			<!-- banner of the page -->
-			<section class="banner bg-parallax overlay" style="background-image:url({{asset('public/images/img75.jpg')}});">
-				<div class="container">
-					<div class="row">
-						<div class="col-xs-12 text-center">
-							<h2 class="heading text-uppercase fwLight">Terms and conditions</h2>
-							<ul class="list-unstyled breadcrumbs">
-								<li><a {{url('/')}}>Home</a></li>
-								<li>/</li>
-								<li>Terms and conditions</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- contact sec of the page -->
-			<div class="contact-sec container">
-				
-				<div class="row">
-					<!-- header of the page -->
-					<header class="col-xs-12 header">
-						<span class="title fontpinyon">Food 15</span>
-						<h1 class="heading text-uppercase">Terms and conditions</h1>
-						<div class="header-img">
-							<img src="images/bdr-img.png" alt="image description" class="img-responsive">
-						</div>
-						<p style="text-align: left;">Please carefully read the terms and conditions ("Terms and Conditions") below before placing any order for any of the Goods or Services from https://food15.com.ng. By placing an order for any of the Goods or Services from this Website, whereas it is by phone, through our mobile applications or by any other available channel, you agree to be bound by these Terms and Conditions.
+    <head>
+        <meta charset="utf-8">
+        <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-							Section 1: Foods 15 Introduction
-							
-							We are Food 15, a brand of https://food15.com.ng, unless otherwise stated.</p>
-							
-							<b>Section 2: Definitions</b>
-							<ul>
-								<li>2.1. "Agreement" references these Terms and Conditions (T&Cs), the Privacy Policy, any payment instructions provided to you and any other form we might provide to you;</li>
-							
-								<li>2.2. By "Privacy Policy" we mean the policy accessible on our Website which details how we collect and store your personal data;</li>
-							
-								<li>2.3. "you", "your" and "yours" are references to you, the person accessing this Website, and placing the orders for the Goods or Services we display on it. Access through any other channel provided by Food 15 will also bound you to these Terms and Conditions;</li>
-							
-								<li>2.4. "we", "us", "our", and "Food 15" are references to the Company;</li>
-							
-								<li>2.5. "Goods" is a reference to any goods which we may offer for sale from our Website from at a given time;</li>
-							
-								<li>2.6. "Service" or "Services" is a reference to any service which we may supply and which you may request via our Website;</li>
-							
-								<li>2.7. "Partner Restaurant" is a third party, which has agreed to co-operate with the Company to prepare and/or deliver the Goods or Services.</li>
-							
-								<li>2.8. "Food Delivery" references perishable goods and any form of delivery service, both provided by our Partner restaurants and for both of which our Partner restaurants take full responsibility;</li>
-							
-								<li>2.9. "Website" is a reference to our Website https://food15.com.ng.ng, our mobile applications or any other platform we will choose to offer our Goods or services.</li>
-							</ul>
-							<b>Section 3: Ordering</b>
-							
-							<p>3.1. By placing an order through our Website, you enter into an agreement with Food 15 with respect to the processing of that order and forwarding it to the Participating Restaurant. If you are paying online, Food 15 is also responsible for any returns or refunds. However, the Restaurant remains responsible for the preparation, quality and delivery of your order. You agree to take particular care when providing us with your details and warrant that these details are accurate and complete at the time of ordering. You also warrant that the credit or debit card details that you provide are for your own credit or debit card and that you have sufficient funds to make the payment.</p>
-						<!-- socail network of the page -->
-						<ul class="social-network list-unstyled">
-						 	<li><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-							<li><a href="javascript:void(0);"><i class="fa fa-twitter active"></i></a></li>
-							<li><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
-							<li><a href="javascript:void(0);"><i class="fa fa-pinterest"></i></a></li>
-						</ul>
-					</header>
-				</div>
-			</div>
-		</main>
-		<!-- footer of the page -->
-		<footer id="footer" class="bg-black">
-			<!-- footer aside of the page -->
-			<aside class="footer-aside bg-grey">
-				<!-- socail network of the page -->
-				<ul class="social-network list-unstyled">
-					<li><a href="javascript:void(0);"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-twitter active"></i></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
-					<li><a href="javascript:void(0);"><i class="fa fa-pinterest"></i></a></li>
-				</ul>
-				<div class="payment-img">
-					<a href="javascript:void(0);"><img src="images/img35.png" class="img-responsive" alt="Payment Card"></a>
-				</div>
-				<a id="back-top" class="round"><i class="fa fa-chevron-up"></i></a>
-			</aside>
-			<!-- footer folder of the page -->
-			<div class="footer-holder">
-				<div class="container">
-					<div class="row mar-bt">
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<div class="logo">
-								<a {{url('/')}}><img class="img-responsive" src="images/logo.png" alt="vineyard" ></a>
-							</div>
-							<!-- contact list of the page -->
-							<ul class="list-unstyled contact-list">
-								<li>Address : No 40 Adeyemi Lawson st off McPherson Ikoyi,<br class="hidden-xs"> Lagos, Nigeria</li>
-								<li>Email: <a href="mailto:info.food15.com">info@food15.com.ng</a></li>
-								 <li>Phone: <a href="tell:08189862968">08189862968</a></li>
-							</ul>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-2">
-							<h3 class="heading3">My Accounts</h3>
-							<!-- f nav of the page -->
-							<ul class="list-unstyled f-nav">
-								<li><a href="javascript:void(0);">My account</a></li>
-								<li><a href="javascript:void(0);">My orders</a></li>
-								<li><a href="javascript:void(0);">Register</a></li>
-								<li><a href="javascript:void(0);">Login</a></li>
-							</ul>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-2">
-							<h3 class="heading3">Quick link</h3>
-							<!-- f nav of the page -->
-							<ul class="list-unstyled f-nav">
-								<li><a href="javascript:void(0);">New User</a></li>
-								<li><a href="javascript:void(0);">Help Center</a></li>
-								<li><a href="javascript:void(0);">Report Spam</a></li>
-								<li><a href="javascript:void(0);">FAQs</a></li>
-							</ul>
-						</div>
-						<div class="col-xs-12 col-sm-6 col-md-4">
-							<h4 class="heading3">Tag Clound</h4>
-							<!-- tags list of the page -->
-							<ul class="list-unstyled tags-list">
-								<li><a href="javascript:void(0);">Music</a></li>
-								<li><a href="javascript:void(0);">Travel</a></li>
-								<li><a href="javascript:void(0);">video</a></li>
-								<li><a href="javascript:void(0);">Ecommerce</a></li>
-								<li><a href="javascript:void(0);">feature</a></li>
-								<li><a href="javascript:void(0);">text</a></li>
-								<li><a href="javascript:void(0);">sports</a></li>
-								<li><a href="javascript:void(0);">fashion</a></li>
-								<li><a href="javascript:void(0);">store</a></li>
-							</ul>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xs-12">
-							<!-- footer nav of the page -->
-							<ul class="list-unstyled footer-nav text-center">
-								<li><a href="{{url('about')}}">About</a></li>
-								<li><a href="{{url('terms')}}">Terms &amp; Conditions</a></li>
-								<li><a href="{{url('privacy')}}">Privacy Policy</a></li>
-								<li><a href="{{url('contact')}}">Contact</a></li>
-							</ul>
-						</div>													
-						<div class="col-xs-12">
-							<div class="copyright text-center">
-								<p>Copyright<a href="javascript:void(0);"> VineYard</a> © 2019. All rights reserved.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<!-- loader of the page -->
-		<div id="loader" class="loader-holder">
-			<div class="block"><img src="{{asset('public/images/svg/hearts.svg')}}" width="100" alt="loader"></div>
-		</div>
-	</div>
-	
-	<!-- include jQuery -->
-	<script src="js/jquery.js"></script>
-	<!-- include jQuery -->
-	<script src="js/plugins.js"></script>
-	<!-- include jQuery -->
-	<script src="js/jquery.main.js"></script>
-</body>
+        <title>Imperial gift card shop - Terms & Conditions</title>
+        @include("includes.header")
+        <!-- Favicon -->
+        
+
+        <!--[if lt IE 9]>
+        <script src="assets/plugins/iesupport/html5shiv.js"></script>
+        <script src="assets/plugins/iesupport/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body id="home" class="wide">
+        <!-- PRELOADER -->
+        <div id="preloader">
+            <div id="preloader-status">
+                <div class="spinner">
+                    <div class="rect1"></div>
+                    <div class="rect2"></div>
+                    <div class="rect3"></div>
+                    <div class="rect4"></div>
+                    <div class="rect5"></div>
+                </div>
+                <div id="preloader-title">Loading</div>
+            </div>
+        </div>
+        <!-- /PRELOADER -->
+
+        <!-- WRAPPER -->
+        <div class="wrapper">
+
+            <!-- HEADER -->
+            <header class="header fixed">
+                <div class="header-wrapper">
+                    <div class="container">
+
+                        <!-- Logo -->
+                        <div class="logo">
+                            <a href="{{url('/')}}"><img height="70px" width="auto" src="{{asset('public/img/logo-bella-shop.png')}}" alt="Bella Shop"/></a>
+                        </div>
+                        <!-- /Logo -->
+
+                        <!-- Header search -->
+                        <div class="header-search">
+                            <input class="form-control" type="text" placeholder="What are you looking?"/>
+                            <button><i class="fa fa-search"></i></button>
+                        </div>
+                        <!-- /Header search -->
+
+                        <!-- Header shopping cart -->
+                        <div class="header-cart">
+                            <div class="cart-wrapper">
+                                    <a href="{{url('cart')}}" class="btn btn-theme-transparent" ><i class="fa fa-shopping-cart"></i> <span class="hidden-xs"> {{Cart::count()}} - $ {{Cart::subTotal()}} </span> <i class="fa fa-angle-down"></i></a>
+                                <!-- Mobile menu toggle button -->
+                                <a href="#" class="menu-toggle btn btn-theme-transparent"><i class="fa fa-bars"></i></a>
+                                <!-- /Mobile menu toggle button -->
+                            </div>
+                        </div>
+                        <!-- Header shopping cart -->
+
+                    </div>
+                </div>
+                <div class="navigation-wrapper">
+                    <div class="container">
+                        <!-- Navigation -->
+                        <nav class="navigation closed clearfix">
+                            <a href="#" class="menu-toggle-close btn"><i class="fa fa-times"></i></a>
+                            <ul class="nav sf-menu">
+                                <li><a href="{{url('/')}}">Home</a></li>
+                                <li><a href="{{url('about')}}">About</a></li>
+                                <li><a href="{{url('amazon')}}">Amazon gift card</a></li>
+                                <li><a href="{{url('itunes')}}">Itunes gift card</a></li>
+                                <li class="active"><a href="{{url('terms')}}">Terms & Conditions</a></li>
+                                <li><a href="{{url('contact')}}">Contact</a></li>
+                                @if(Auth::User())
+                                <li><a href="#" >{{Auth::User()->name}},</a></li><li> <a style="color: brown;" href="{{url('logout')}}">Logout</a></li>
+                                @else
+                                <li><a style="color: #00b16a;" href="{{url('login')}}">Login</a></li>
+                                @endif
+
+                            </ul>
+                        </nav>
+                        <!-- /Navigation -->
+                    </div>
+                </div>
+            </header>
+            <!-- /HEADER -->
+
+            <!-- CONTENT AREA -->
+            <div class="content-area">
+                                
+                <section class="page-section">
+                    <div class="container">
+                        <h3>Digital Gift Card Delivery (Email Code Delivery)</h3>
+                        <p class="lead">
+								All gift cards are delivered electronically via email delivery. After your order is processed, we begin the verification steps immediately. If no further verification is required, then your gift card will be emailed out immediately. We accept customers from all over the world.
+								If you do not see any emails in your inbox, please check your spam folder.
+								If you believe there has been an error in your delivery, please email support@imperialgiftcard.com
+						</p>
+						<h3>Is there an expiration date on the gift cards?</h3>
+                        <p class="lead">
+							We offer a 100% guarantee, all cards delivered by us will be working and redeemable. Further, none of the cards we sell have any expiration date, so there is no rush or need to redeem your card right away.
+                        </p>
+                    </div>
+                </section>
+            <!-- /CONTENT AREA -->
+
+            <!-- FOOTER -->
+            <footer class="footer">
+                <div class="footer-widgets">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">About Us</h4>
+                                    <p>Having access to digital content such as music and movies enhances people’s lives and experience culture outside of their own. We don’t believe the border of your country should define or restrict what forms of entertainment you have access to.</p>
+                                    <ul class="social-icons">
+                                        <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#" class="instagram"><i class="fa fa-instagram"></i></a></li>
+                                        <li><a href="#" class="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="widget">
+                                    <h4 class="widget-title">News Letter</h4>
+                                    <p>Subscribe to our newsletter.</p>
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <input class="form-control" type="text" placeholder="Enter Your Mail and Get $10 Cash"/>
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-theme btn-theme-transparent">Subscribe</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="widget widget-categories">
+                                    <h4 class="widget-title">Information</h4>
+                                    <ul>
+                                        <li><a href="{{url('about')}}">About Us</a></li>
+                                        
+                                        <li><a href="{{url('contact')}}">Contact Us</a></li>
+                                        <li><a href="{{url('terms')}}">Terms and Conditions</a></li>
+                                        <li><a href="{{url('privacy')}}">Private Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="widget widget-tag-cloud">
+                                    <h4 class="widget-title">Item Tags</h4>
+                                    <ul>
+                                        <li><a href="#">Itunes card</a></li>
+                                         <li><a href="#">Amazon card</a></li>
+                                         <li><a href="#">Walmart card</a></li>
+                                        <li><a href="#">E commerce</a></li>
+                                        <li><a href="#">Hot Deals</a></li>
+                                        <li><a href="#">Supplier</a></li>
+                                        <li><a href="#">Shop</a></li>
+                                        
+                                       
+                                        
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-meta">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="col-sm-6">
+                                <div class="copyright">Copyright 2014 BELLA SHOP   |   All Rights Reserved   |   Designed By Jthemes</div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="payments">
+                                    <ul>
+                                        <li><img src="assets/img/preview/payments/visa.jpg" alt=""/></li>
+                                        <li><img src="assets/img/preview/payments/mastercard.jpg" alt=""/></li>
+                                        <li><img src="assets/img/preview/payments/paypal.jpg" alt=""/></li>
+                                        <li><img src="assets/img/preview/payments/american-express.jpg" alt=""/></li>
+                                        <li><img src="assets/img/preview/payments/visa-electron.jpg" alt=""/></li>
+                                        <li><img src="assets/img/preview/payments/maestro.jpg" alt=""/></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- /FOOTER -->
+
+            <div id="to-top" class="to-top"><i class="fa fa-angle-up"></i></div>
+
+        </div>
+        <!-- /WRAPPER -->
+        <!--<![endif]-->
+        @include("includes.footer")
+    </body>
 </html>

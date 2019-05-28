@@ -2,39 +2,28 @@
 <html lang="en">
 
 <head>
-    <!-- set the encoding of your site -->
-	<meta charset="utf-8">
-	<!-- set the viewport width and initial-scale on mobile devices -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<!-- set the apple mobile web app capable -->
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<!-- set the HandheldFriendly -->
-	<meta name="HandheldFriendly" content="True">
-	<!-- set the apple mobile web app status bar style -->
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<!-- set the Keyword -->
-	<meta name="keywords" content="blog, clean, clear, creative, design web, ecommerce, flat, Indoor Furniture, marketing, portfolio, vineyard, wines, wines WordPress theme, winewinery">
-	<!-- include the site stylesheet -->
-	<link href="https://fonts.googleapis.com/css?family=Philosopher:400,700%7CPinyon+Script" rel="stylesheet">
-	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="{{asset('public/css/font-awesome.css')}}">
-	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="{{asset('public/css/bootstrap.css')}}">
-	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="{{asset('public/css/plugins.css')}}">
-	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="{{asset('public/css/icofont.css')}}">
-	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="{{asset('public/style.css')}}">
-	<!-- include the site stylesheet -->
-	<link rel="stylesheet" href="{{asset('public/css/responsive.css')}}">
-	<!-- include the site stylesheet -->
-    <link rel="stylesheet" href="{{asset('public/css/colors.css')}}">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+
+    <!-- CSS Global -->
+    <link href="{{asset('public/plugins/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/plugins/bootstrap-select/css/bootstrap-select.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/plugins/fontawesome/css/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/plugins/prettyphoto/css/prettyPhoto.css')}}" rel="stylesheet">
+    <link href="{{asset('public/plugins/owl-carousel2/assets/owl.carousel.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/plugins/owl-carousel2/assets/owl.theme.default.min.css')}}" rel="stylesheet">
+    <link href="{{asset('public/plugins/animate/animate.min.css')}}" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="{{asset('public/css/theme.css')}}" rel="stylesheet">
+    <link href="{{asset('public/css/theme-green-1.css')}}" rel="stylesheet" id="theme-config-link">
+
+    <!-- Head Libs -->
+    <script src="{{asset('public/plugins/modernizr.custom.js')}}"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
     
-    <meta name="google-site-verification" content="gLG6meoaI5A-6u3j7YGZugDStbVXXWP6HMlmndgIk00" />
     
-    <script src="{{asset('public/admin/node_modules/jquery/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{asset('public/plugins/jquery/jquery-1.11.1.min.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
     <script>
         function getSuccess(data){

@@ -1,37 +1,16 @@
-   <!-- footer -->
-      <!-- ============================================================== -->
-    <footer class="footer">
-        © 2018 Powered By Optisoft
-    </footer>
-        <!-- ============================================================== -->
-        <!-- End footer -->
-        <!-- ============================================================== -->
-    <script src="{{asset('public/admin/node_modules/jquery/jquery-3.2.1.min.js')}}"></script>
-    <!-- Bootstrap popper Core JavaScript -->
-    <script src="{{asset('public/admin/node_modules/popper/popper.min.js')}}"></script>
-    <script src="{{asset('public/admin/node_modules/bootstrap/dist/js/bootstrap.min.js')}}"></script>
-    <!-- slimscrollbar scrollbar JavaScript -->
-    <script src="{{asset('public/admin/dist/js/perfect-scrollbar.jquery.min.js')}}"></script>
-    <!--Wave Effects -->
-    <script src="{{asset('public/admin/dist/js/waves.js')}}"></script>
-    <!--Menu sidebar -->
-    <script src="{{asset('public/admin/dist/js/sidebarmenu.js')}}"></script>
-    <!--Custom JavaScript -->
-    <script src="{{asset('public/admin/dist/js/custom.min.js')}}"></script>
-    <!-- ============================================================== -->
-    <!-- This page plugins -->
-    <!-- ============================================================== -->
-    <!--sparkline JavaScript -->
-    <script src="{{asset('public/admin/node_modules/raphael/raphael-min.js')}}"></script>
-    <script src="{{asset('public/admin/node_modules/morrisjs/morris.js')}}"></script>
-    <script src="{{asset('public/admin/node_modules/jquery-sparkline/jquery.sparkline.min.js')}}"></script>
-    
-    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-    <script>
-    $(document).ready(function() {
-        $('.table').DataTable();
-    } );
-    </script>
-    </body>
+<!-- JS Global -->
+<script src="{{asset('public/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('public/plugins/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
+<script src="{{asset('public/plugins/superfish/js/superfish.min.js')}}"></script>
+<script src="{{asset('public/plugins/prettyphoto/js/jquery.prettyPhoto.js')}}"></script>
+<script src="{{asset('public/plugins/owl-carousel2/owl.carousel.min.js')}}"></script>
+<script src="{{asset('public/plugins/jquery.sticky.min.js')}}"></script>
+<script src="{{asset('public/plugins/jquery.easing.min.js')}}"></script>
+<script src="{{asset('public/plugins/jquery.smoothscroll.min.js')}}"></script>
+<script src="{{asset('public/plugins/smooth-scrollbar.min.js')}}"></script>
 
-    </html>
+<!-- JS Page Level -->
+<script src="{{asset('public/js/theme.js')}}"></script>
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="{{asset('public/plugins/jquery.cookie.js')}}"></script>
