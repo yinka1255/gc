@@ -122,6 +122,7 @@
                                 <!-- /Slide 3 -->
 
                                 <!-- Slide 2 -->
+                                <!--
                                 <div class="item slide2 alt">
                                     <img class="slide-img" src="{{asset('public/img/preview/slider/slide-2.jpg')}}" alt=""/>
                                     <div class="caption">
@@ -141,9 +142,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
                                 <!-- /Slide 2 -->
 
                                 <!-- Slide 1 -->
+                                <!--
                                 <div class="item slide1">
                                     <img class="slide-img" src="assets/img/preview/slider/slide-1.jpg" alt=""/>
                                     <div class="caption">
@@ -162,64 +165,16 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
                                 <!-- /Slide 1 -->
-
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-                <!-- /PAGE -->
-
-                <!-- PAGE -->
-                <section class="page-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <div class="thumbnail no-border no-padding thumbnail-banner size-1x3-b alt-font">
-                                    <div class="media">
-                                        <a class="media-link" href="#">
-                                            <div class="img-bg" style="background-image: url('assets/img/preview/shop/banner-8.jpg')"></div>
-                                            <div class="caption text-right">
-                                                <div class="caption-wrapper div-table">
-                                                    <div class="caption-inner div-cell">
-                                                        <h2 class="caption-title"><span>Amazon Gift Card</span></h2>
-                                                        <h3 class="caption-sub-title"><span>20% Discount</span></h3>
-                                                        <span class="btn btn-theme btn-theme-sm">Shop Now</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-4">
-                                <div class="thumbnail no-border no-padding thumbnail-banner size-1x1-b alt-font">
-                                    <div class="media">
-                                        <a class="media-link" href="#">
-                                            <div class="img-bg" style="background-image: url('assets/img/preview/shop/banner-9.jpg')"></div>
-                                            <div class="caption text-left">
-                                                <div class="caption-wrapper div-table">
-                                                    <div class="caption-inner div-cell">
-                                                        <h2 class="caption-title"><span>Itunes Gift Card</span></h2>
-                                                        <h3 class="caption-sub-title"><span>20% iscount</span></h3>
-                                                        <span class="btn btn-theme btn-theme-sm">Shop Now</span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
                 </section>
                 <!-- /PAGE -->
-
                 <!-- PAGE -->
                 <section class="page-section">
                     <div class="container">
-
                         <div class="tabs">
                             <ul id="tabs" class="nav nav-justified-off"><!--
                                 --><li class=""><a href="#tab-1" data-toggle="tab">Gift cards</a></li><!--
@@ -371,17 +326,17 @@
                         <div class="row">
 
                             <div class="col-sm-6">
-                                <div class="copyright">Copyright 2014 BELLA SHOP   |   All Rights Reserved   |   Designed By Jthemes</div>
+                                <div class="copyright">Copyright 2019 IMPERIAL GIFT SHOP   |   All Rights Reserved </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="payments">
                                     <ul>
-                                        <li><img src="assets/img/preview/payments/visa.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/mastercard.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/paypal.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/american-express.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/visa-electron.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/maestro.jpg" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/mastercard.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/paypal.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/american-express.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa-electron.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/maestro.jpg')}}" alt=""/></li>
                                     </ul>
                                 </div>
                             </div>

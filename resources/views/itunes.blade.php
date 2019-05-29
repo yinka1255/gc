@@ -101,6 +101,7 @@
                             <div class="owl-carousel" id="main-slider">
 
                                 <!-- Slide 3 -->
+                                <!--
                                 <div class="item slide3 dark">
                                     <img class="slide-img" src="{{asset('public/img/preview/slider/slide-3.jpg')}}" alt=""/>
                                     <div class="caption">
@@ -119,9 +120,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
                                 <!-- /Slide 3 -->
 
                                 <!-- Slide 2 -->
+                                <!--
                                 <div class="item slide2 alt">
                                     <img class="slide-img" src="{{asset('public/img/preview/slider/slide-2.jpg')}}" alt=""/>
                                     <div class="caption">
@@ -141,9 +144,11 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
                                 <!-- /Slide 2 -->
 
                                 <!-- Slide 1 -->
+                                <!--
                                 <div class="item slide1">
                                     <img class="slide-img" src="assets/img/preview/slider/slide-1.jpg" alt=""/>
                                     <div class="caption">
@@ -162,6 +167,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                -->
                                 <!-- /Slide 1 -->
 
                             </div>
@@ -172,6 +178,7 @@
                 <!-- /PAGE -->
 
                 <!-- PAGE -->
+                <!--
                 <section class="page-section">
                     <div class="container">
                         <div class="row">
@@ -214,6 +221,7 @@
                         </div>
                     </div>
                 </section>
+                -->
                 <!-- /PAGE -->
 
                 <!-- PAGE -->
@@ -376,12 +384,12 @@
                             <div class="col-sm-6">
                                 <div class="payments">
                                     <ul>
-                                        <li><img src="assets/img/preview/payments/visa.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/mastercard.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/paypal.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/american-express.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/visa-electron.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/maestro.jpg" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/mastercard.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/paypal.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/american-express.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa-electron.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/maestro.jpg')}}" alt=""/></li>
                                     </ul>
                                 </div>
                             </div>

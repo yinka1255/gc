@@ -127,7 +127,7 @@
 									<tbody>
 										@foreach(Cart::content() as $cart) 
 										<tr>
-											<td class="image"><a class="media-link" href="#"><i class="fa fa-plus"></i><img src="{{asset('public/images/'.$cart->options->image)}}" alt=""/></a></td>
+											<td class="image"><a class="media-link" href="#"><i class="fa fa-plus"></i><img height="40px" width="auto" src="{{asset('public/img/'.$cart->options->image)}}" alt=""/></a></td>
 											<td class="quantity">x3</td>
 											<td class="description">
 												<h4><a href="#">{{$cart->name}}</a></h4>
@@ -169,12 +169,24 @@
 						
 						<form id="card-form" action="{{url('order')}}" method="post" class="form-delivery">
 							<div class="row">
+                                @auth
 								<div class="col-md-6">
 									<div class="form-group"><label>Name</label><input class="form-control" type="text" value="{{Auth::User()->name}}" name="customer_name" required placeholder="Name"></div>
 								</div>
 								<div class="col-md-6">
-										<div class="form-group"><label>Email</label><input class="form-control" value="{{Auth::User()->email}}" type="email" name="email" required placeholder="Delivery Email"></div>
-									</div>
+                                    <div class="form-group"><label>Email</label><input class="form-control" value="{{Auth::User()->email}}" type="email" name="email" required placeholder="Delivery Email"></div>
+                                </div>
+                                @endauth
+                                @guest
+                                <div class="col-md-6">
+                                    <div class="form-group"><label>Name</label><input class="form-control" type="text" name="customer_name" required placeholder="Name"></div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group"><label>Email</label><input class="form-control" type="email" name="email" required placeholder="Delivery Email"></div>
+                                </div>
+                                @endguest
+
+
 								<div class="col-md-12">
 									<div class="form-group"><textarea class="form-control" placeholder="Addıtıonal Informatıon" name="name" id="id" cols="30" rows="10"></textarea></div>
 								</div>
@@ -183,11 +195,17 @@
 							<h3 style="margin-top: 20px;" class="block-title alt"><i class="fa fa-angle-down"></i>3. Payments </h3>
 							<div class="panel-group payments-options" id="accordion" role="tablist" aria-multiselectable="true">
 								<div class="row">
+                                    <div class="col-md-7">
+                                        
+                                    </div>
+                                    <div class="col-sm-5">
+                                        <img width="100%" src="{{asset('public/img/preview/payments/cards.png')}}" alt=""/></li>
+                                    </div>
 									<div class="col-md-12">
 										<div class="form-group"><label>Card number</label><input class="form-control cc-number amex" type="text" name="card" x-autocompletetype="cc-number" required placeholder="0000 0000 0000 0000"></div>
 									</div>
 									<div class="col-md-12">
-										<div class="form-group"><label>Card Name</label><input value="{{Auth::User()->name}}" class="form-control" placeholder="As written on card" required type="text" name="name"></div>
+										<div class="form-group"><label>Card Name</label><input class="form-control" placeholder="As written on card" required type="text" name="name"></div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group"><label>Expiry Date</label><input class="form-control cc-exp"  required  placeholder="MM/YYYY" required="" maxlength="9" name="expiry"></div>
@@ -281,17 +299,17 @@
                         <div class="row">
 
                             <div class="col-sm-6">
-                                <div class="copyright">Copyright 2014 BELLA SHOP   |   All Rights Reserved   |   Designed By Jthemes</div>
+                                <div class="copyright">Copyright 2019 IMPERIAL GIFT SHOP   |   All Rights Reserved </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="payments">
                                     <ul>
-                                        <li><img src="assets/img/preview/payments/visa.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/mastercard.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/paypal.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/american-express.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/visa-electron.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/maestro.jpg" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/mastercard.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/paypal.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/american-express.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa-electron.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/maestro.jpg')}}" alt=""/></li>
                                     </ul>
                                 </div>
                             </div>

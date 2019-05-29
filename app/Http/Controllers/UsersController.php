@@ -20,8 +20,19 @@ class UsersController extends Controller{
 
     public function home(){
         $categories = Category::all();
-        $products = Product::all();
+        $products = Product::orderBy("id", "asc")->get();
         return view('index')->with(["categories"=> $categories, "products"=> $products]);
+    }
+
+    public function amazon(){
+        $categories = Category::all();
+        $products = Product::where("category_id", 1)->get();
+        return view('amazon')->with(["categories"=> $categories, "products"=> $products]);
+    }
+    public function itunes(){
+        $categories = Category::all();
+        $products = Product::where("category_id", 2)->get();
+        return view('itunes')->with(["categories"=> $categories, "products"=> $products]);
     }
 
     public function about(){

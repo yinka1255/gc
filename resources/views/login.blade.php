@@ -28,6 +28,53 @@
         
     </head>
     <body id="home" class="wide">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+    
+    
+            <script src="{{asset('public/plugins/jquery/jquery-1.11.1.min.js')}}"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+            <script>
+                function getSuccess(data){
+                    $.confirm({
+                            title: 'Success',
+                            content: data,
+                            typeAnimated: true,
+                            buttons: {
+                                'Continue shopping': function () {
+                                    text: 'Contnue shopping'
+                                    
+                                },
+                                'Checkout': function () {
+                                    window.location.href = "{{url('cart')}}";
+                                },
+                            }
+                        });
+                }
+        
+            function getError(data){
+                    $.confirm({
+                            title: 'Error!',
+                            content: data,
+                            type: 'red',
+                            typeAnimated: true,
+                            buttons: {
+                                    Ok: function () {
+                                    }
+                            }
+                    });
+                }
+            </script>
+            
+            @if(Session::has('error'))
+            <script>
+                getError("{{Session::get('error')}}");
+            </script>
+            @endif	
+            @if(Session::has('success'))
+            <script>
+                getSuccess("{{Session::get('success')}}");
+            </script>
+            @endif	
         <!-- PRELOADER -->
         <div id="preloader">
             <div id="preloader-status">
@@ -246,17 +293,17 @@
                         <div class="row">
 
                             <div class="col-sm-6">
-                                <div class="copyright">Copyright 2014 BELLA SHOP   |   All Rights Reserved   |   Designed By Jthemes</div>
+                                <div class="copyright">Copyright 2019 IMPERIAL GIFT SHOP   |   All Rights Reserved </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="payments">
                                     <ul>
-                                        <li><img src="assets/img/preview/payments/visa.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/mastercard.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/paypal.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/american-express.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/visa-electron.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/maestro.jpg" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/mastercard.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/paypal.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/american-express.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa-electron.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/maestro.jpg')}}" alt=""/></li>
                                     </ul>
                                 </div>
                             </div>
@@ -273,7 +320,6 @@
         <!-- /WRAPPER -->
 
         <!-- JS Global -->
-        <script src="{{asset('public/plugins/jquery/jquery-1.11.1.min.js')}}"></script>
         <script src="{{asset('public/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
         <script src="{{asset('public/plugins/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
         <script src="{{asset('public/plugins/superfish/js/superfish.min.js')}}"></script>

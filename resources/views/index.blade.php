@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Imperial gift shop | Itunes and Amazon Card with 20% discounted </title>
+        <meta name="description" content="Legit Amazon and Itunes Gift Cards. Trusted Online Store. Buy amazon and itunes gift cards at 20% discount delivered to your email instantly. 100% safe and secure">
         @include("includes.header")
         <!-- Favicon -->
         
@@ -108,11 +109,14 @@
                                             <div class="div-table">
                                                 <div class="div-cell">
                                                     <div class="caption-content">
-                                                        <h2 class="caption-title">Amazon Gift Card</h2>
+                                                        <h2 class="caption-title">Amazon & Itunes Gift Card</h2>
                                                         <h3 class="caption-subtitle"><span>20% Discount</span></h3>
+                                                        <h2 class="caption-title">Delivered to your E-mail instantly</h2>
                                                         <p class="caption-text">
-                                                            <a class="btn btn-theme" href="{{url('amazon')}}">Shop Now</a>
+                                                            <a class="btn btn-theme" href="{{url('amazon')}}">Buy Amazon Cards</a>
+                                                            <a class="btn btn-theme" href="{{url('itunes')}}">Buy Itunes Cards</a>
                                                         </p>
+                                                        
                                                     </div>
                                                 </div>
                                             </div>
@@ -172,6 +176,7 @@
                 <!-- /PAGE -->
 
                 <!-- PAGE -->
+                <!--
                 <section class="page-section">
                     <div class="container">
                         <div class="row">
@@ -214,6 +219,7 @@
                         </div>
                     </div>
                 </section>
+                -->
                 <!-- /PAGE -->
 
                 <!-- PAGE -->
@@ -245,6 +251,7 @@
                                             </div>
                                             <div class="caption text-center">
                                                 <h4 class="caption-title"><a href="product-details.html">{{$product->name}}</a></h4>
+                                                <p style="color: brown;">({{$product->qty}} units available)</p>
                                                 <div class="rating">
                                                     <span class="star"></span><!--
                                                     --><span class="star active"></span><!--
@@ -371,17 +378,17 @@
                         <div class="row">
 
                             <div class="col-sm-6">
-                                <div class="copyright">Copyright 2014 BELLA SHOP   |   All Rights Reserved   |   Designed By Jthemes</div>
+                                <div class="copyright">Copyright 2019 IMPERIAL GIFT SHOP   |   All Rights Reserved </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="payments">
                                     <ul>
-                                        <li><img src="assets/img/preview/payments/visa.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/mastercard.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/paypal.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/american-express.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/visa-electron.jpg" alt=""/></li>
-                                        <li><img src="assets/img/preview/payments/maestro.jpg" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/mastercard.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/paypal.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/american-express.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/visa-electron.jpg')}}" alt=""/></li>
+                                        <li><img src="{{asset('public/img/preview/payments/maestro.jpg')}}" alt=""/></li>
                                     </ul>
                                 </div>
                             </div>

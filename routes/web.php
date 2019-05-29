@@ -13,6 +13,8 @@
 
 //General Routes
 Route::get('/', 'UsersController@home');
+Route::get('/amazon', 'UsersController@amazon');
+Route::get('/itunes', 'UsersController@itunes');
 Route::get('/about', 'UsersController@about');
 Route::get('/contact', 'UsersController@contact');
 Route::get('/terms', 'UsersController@terms');
