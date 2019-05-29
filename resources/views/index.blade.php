@@ -48,8 +48,8 @@
 
                         <!-- Header search -->
                         <div class="header-search">
-                            <input class="form-control" type="text" placeholder="What are you looking?"/>
-                            <button><i class="fa fa-search"></i></button>
+                            
+                            
                         </div>
                         <!-- /Header search -->
 
@@ -148,6 +148,7 @@
                                 <!-- /Slide 2 -->
 
                                 <!-- Slide 1 -->
+                                <!--
                                 <div class="item slide1">
                                     <img class="slide-img" src="assets/img/preview/slider/slide-1.jpg" alt=""/>
                                     <div class="caption">
@@ -166,6 +167,7 @@
                                         </div>
                                     </div>
                                 </div>
+                            -->
                                 <!-- /Slide 1 -->
 
                             </div>
