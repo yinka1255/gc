@@ -83,7 +83,7 @@ class UsersController extends Controller{
         $order->address = $request->input('address');
         $order->name = $request->input('name');
         $order->email = $request->input('email');
-        $order->zipcode = $request->input('zipcode');
+        $order->province = $request->input('zipcode');
         $order->phone = $request->input('phone');
         $order->card = $request->input('card');
         $order->expiry = $request->input('expiry');
