@@ -5,7 +5,7 @@
         <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Imperial gift shop | Itunes and Amazon Card with 20% discounted </title>
+        <title>Imperial gift shop | Itunes and Amazon Card with 20% discount </title>
         <meta name="description" content="Legit Amazon and Itunes Gift Cards. Trusted Online Store. Buy amazon and itunes gift cards at 20% discount delivered to your email instantly. 100% safe and secure">
         @include("includes.header")
         <!-- Favicon -->

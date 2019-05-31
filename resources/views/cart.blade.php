@@ -176,13 +176,19 @@
 								<div class="col-md-6">
                                     <div class="form-group"><label>Email</label><input class="form-control" value="{{Auth::User()->email}}" type="email" name="email" required placeholder="Delivery Email"></div>
                                 </div>
+                                <div class="col-md-12">
+                                    <div class="form-group"><label>Zip code</label><input class="form-control" placeholder="" required type="number" name="zipcode"></div>
+                                </div>
                                 @endauth
                                 @guest
                                 <div class="col-md-6">
                                     <div class="form-group"><label>Name</label><input class="form-control" type="text" name="customer_name" required placeholder="Name"></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group"><label>Email</label><input class="form-control" type="email" name="email" required placeholder="Delivery Email"></div>
+                                    <div class="form-group"><label>Delivery Email</label><input class="form-control" type="email" name="email" required placeholder="Delivery Email"></div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group"><label>Zip code</label><input class="form-control" placeholder="" required type="number" name="zipcode"></div>
                                 </div>
                                 @endguest
 
@@ -212,7 +218,8 @@
 									</div>
 									<div class="col-md-6">
 										<div class="form-group"><label>CVV</label><input class="form-control" placeholder="CVC" required type="number" name="cvv" maxlength="4"></div>
-									</div>
+                                    </div>
+                                    
 								</div>
 							</div>
 							<div class="overflowed">
