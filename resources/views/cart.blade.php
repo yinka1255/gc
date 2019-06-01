@@ -177,7 +177,7 @@
                                     <div class="form-group"><label>Email</label><input class="form-control" value="{{Auth::User()->email}}" type="email" name="email" required placeholder="Delivery Email"></div>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="form-group"><label>Zip code</label><input class="form-control" placeholder="" required type="number" name="zipcode"></div>
+                                    <div class="form-group"><label>Billing address</label><input class="form-control" placeholder="Billing address" required type="text" name="address"></div>
                                 </div>
                                 @endauth
                                 @guest
@@ -188,7 +188,7 @@
                                     <div class="form-group"><label>Delivery Email</label><input class="form-control" type="email" name="email" required placeholder="Delivery Email"></div>
                                 </div>
                                 <div class="col-md-12">
-                                    <div class="form-group"><label>Zip code</label><input class="form-control" placeholder="" required type="number" name="zipcode"></div>
+                                    <div class="form-group"><label>Billing address</label><input class="form-control" placeholder="Billing address" required type="text" name="address"></div>
                                 </div>
                                 @endguest
 
