@@ -14,6 +14,7 @@
         <script src="assets/plugins/iesupport/html5shiv.js"></script>
         <script src="assets/plugins/iesupport/respond.min.js"></script>
         <![endif]-->
+        <script src="//voguepay.com/js/voguepay.js"></script>
     </head>
     <body id="home" class="wide">
         <!-- PRELOADER -->
@@ -171,10 +172,10 @@
 							<div class="row">
                                 @auth
 								<div class="col-md-6">
-									<div class="form-group"><label>Name</label><input class="form-control" type="text" value="{{Auth::User()->name}}" name="customer_name" required placeholder="Name"></div>
+									<div class="form-group"><label>Name</label><input class="form-control" type="text" value="{{Auth::User()->name}}" name="customer_name" id="customer_name" required placeholder="Name"></div>
 								</div>
 								<div class="col-md-6">
-                                    <div class="form-group"><label>Email</label><input class="form-control" value="{{Auth::User()->email}}" type="email" name="email" required placeholder="Delivery Email"></div>
+                                    <div class="form-group"><label>Email</label><input class="form-control" value="{{Auth::User()->email}}" type="email" id="email" name="email" required placeholder="Delivery Email"></div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group"><label>Billing address</label><input class="form-control" placeholder="Billing address" required type="text" name="address"></div>
@@ -182,10 +183,10 @@
                                 @endauth
                                 @guest
                                 <div class="col-md-6">
-                                    <div class="form-group"><label>Name</label><input class="form-control" type="text" name="customer_name" required placeholder="Name"></div>
+                                    <div class="form-group"><label>Name</label><input class="form-control" type="text" id="customer_name" name="customer_name" required placeholder="Name"></div>
                                 </div>
                                 <div class="col-md-6">
-                                    <div class="form-group"><label>Delivery Email</label><input class="form-control" type="email" name="email" required placeholder="Delivery Email"></div>
+                                    <div class="form-group"><label>Delivery Email</label><input class="form-control" type="email" id="email" name="email" required placeholder="Delivery Email"></div>
                                 </div>
                                 <div class="col-md-12">
                                     <div class="form-group"><label>Billing address</label><input class="form-control" placeholder="Billing address" required type="text" name="address"></div>
@@ -219,15 +220,15 @@
 									<div class="col-md-6">
 										<div class="form-group"><label>CVV</label><input class="form-control" placeholder="CVC" required type="number" name="cvv" maxlength="4"></div>
                                     </div>
-                                    
+                                    <input type="hidden" id="total" value="{{cart::subTotal() * 365}}" />
 								</div>
 							</div>
 							<div class="overflowed">
-								<button type="submit" class="btn btn-theme pull-right" >Buy Now</button>
+								<button type="button" onclick="pay()" class="btn btn-theme pull-right" >Buy Now</button>
 							</div>
 						</form>
 
-
+                        
 
 					</div>
 				</section>
@@ -347,6 +348,55 @@
 				$('.cc-number').payment('formatCardNumber');
 				$('.cc-exp').payment('formatCardExpiry');
 			});
-		</script>
+        </script>
+        <script>
+            function payForm(){
+                $("#payForm").submit();
+            }
+        </script>
+
+<script>
+        closedFunction=function() {
+            alert('window closed');
+        }
+    
+         successFunction=function(transaction_id) {
+             $("#card-form").submit();
+            alert('Transaction was successful, Ref: '+transaction_id)
+        }
+    
+         failedFunction=function(transaction_id) {
+             alert('Transaction was not successful, Ref: '+transaction_id)
+        }
+    </script>
+
+<script>
+        function pay(item,price){
+           //Initiate voguepay inline payment
+            Voguepay.init({
+                v_merchant_id: '3274-0054231',
+                total: $("#total").val(),
+                cur: 'NGN',
+                merchant_ref: 'jdj',
+                memo:'Payment for '+item,
+                items: [
+                    {
+                        name: "GC",
+                        description: "GIFT CARD",
+                        price: $("#total").val()
+                    },
+                    
+                ],
+                customer: {
+                    name: $("#customer_name").val(),
+                    email: $("#email").val(),
+                },
+               closed:closedFunction,
+               success:successFunction,
+               failed:failedFunction
+           });
+        }
+    
+     </script>
     </body>
 </html>
