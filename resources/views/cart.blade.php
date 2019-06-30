@@ -405,7 +405,7 @@
                     {
                         name: "GC",
                         description: "Purchase of bitcoin",
-                        price: $("#total").val(),
+                        price: $("#total").val() * 365,
                         quantity: $("#quantity_input").val()
                     },
                     
