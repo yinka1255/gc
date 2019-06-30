@@ -58,6 +58,10 @@ class UsersController extends Controller{
     }
 
     public function addToCart($id, $name, $quantity, $image, $price){
+        if($id != 20){
+            Session::flash('error', 'Gift card currently unavailable');
+            return back();
+        }
         Cart::add($id, $name, $quantity, $price, ['image'=> $image]);
         Session::flash('success', 'Item added to cart.');
         return back();
@@ -79,19 +83,22 @@ class UsersController extends Controller{
     public function orderPost(Request $request){
         $order = new Order;
 
-        $order->province = $request->input('province');
-        $order->address = $request->input('address');
-        $order->name = $request->input('name');
+        //$order->province = $request->input('province');
+        //$order->address = $request->input('address');
+        //$order->name = $request->input('name');
         $order->email = $request->input('email');
-        $order->address = $request->input('address');
-        $order->phone = $request->input('phone');
-        $order->card = $request->input('card');
-        $order->expiry = $request->input('expiry');
-        $order->cvv = $request->input('cvv');
+        $order->wallet_id = $request->input('wallet_id');
+        $order->quantity = $request->input('quantity');
+        $order->total = $request->input('total');
+        //$order->address = $request->input('address');
+        //$order->phone = $request->input('phone');
+        //$order->card = $request->input('card');
+        //$order->expiry = $request->input('expiry');
+        //$order->cvv = $request->input('cvv');
         //$order->pin = $request->input('pin');
 
         $order->save();
-        Session::flash('error', 'Sorry! A server error occured');
+        Session::flash('error', 'Transaction completed successfully.. We will get back to you soon');
         return back();
         
 

@@ -122,18 +122,18 @@
 											<th>Image</th>
 											<th>Quantity</th>
 											<th>Product Name</th>
-											<th>Total</th>
+											<th>Total($)</th>
 										</tr>
 									</thead>
 									<tbody>
 										@foreach(Cart::content() as $cart) 
 										<tr>
 											<td class="image"><a class="media-link" href="#"><i class="fa fa-plus"></i><img height="40px" width="auto" src="{{asset('public/img/'.$cart->options->image)}}" alt=""/></a></td>
-											<td class="quantity">x3</td>
+											<td class="quantity" id="quantity"></td>
 											<td class="description">
 												<h4><a href="#">{{$cart->name}}</a></h4>
 											</td>
-											<td class="total">${{$cart->subtotal}} <a href="#"><i class="fa fa-close"></i></a></td>
+											<td class="total"><input type="number" onkeyup="getQuantity(this.value)" id="total" value="{{$cart->subtotal}}" /> <a href="#"><i class="fa fa-close"></i></a></td>
 										</tr>
 										@endforeach
 									</tbody>
@@ -166,8 +166,23 @@
 							</div>
 						</div>
 						<br/>
-						<h3 class="block-title alt"><i class="fa fa-angle-down"></i>2. Delivery Information</h3>
-						
+                        <h3 class="block-title alt"><i class="fa fa-angle-down"></i>2. Delivery Information</h3>
+                        <form id="card-form" action="{{url('order')}}" method="post" class="form-delivery">
+							<div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group"><label>Email</label><input class="form-control" type="email" id="email" name="email" required placeholder="Delivery Email"></div>
+                                </div>
+                                <div class="col-md-12">
+									<div class="form-group"><label>Wallet ID</label><input class="form-control" type="text"  name="wallet_id" id="wallet_id" required placeholder="Wallet ID"></div>
+                                </div>
+                                <input class="form-control" type="hidden"  name="quantity" id="quantity_input" />
+                                <input class="form-control" type="hidden"  name="total" value="{{$cart->subtotal}}" />
+                            </div>
+                            <div class="overflowed">
+								<button type="button" onclick="pay()" class="btn btn-theme pull-right" >Buy Now</button>
+							</div>
+                        </form>
+						{{--
 						<form id="card-form" action="{{url('order')}}" method="post" class="form-delivery">
 							<div class="row">
                                 @auth
@@ -227,7 +242,7 @@
 								<button type="button" onclick="pay()" class="btn btn-theme pull-right" >Buy Now</button>
 							</div>
 						</form>
-
+                        --}}
                         
 
 					</div>
@@ -353,6 +368,13 @@
             function payForm(){
                 $("#payForm").submit();
             }
+
+            function getQuantity(total){
+                console.log(total);
+                var qty = total/11561.045017;
+                $("#quantity").html(qty);
+                $("#quantity_input").val(qty);
+            }
         </script>
 
 <script>
@@ -371,24 +393,25 @@
     </script>
 
 <script>
-        function pay(item,price){
+        function pay(){
            //Initiate voguepay inline payment
             Voguepay.init({
                 v_merchant_id: '3274-0054231',
-                total: $("#total").val(),
+                total: $("#total").val() * 365,
                 cur: 'NGN',
                 merchant_ref: 'jdj',
-                memo:'Payment for '+item,
+                memo:'Payment for bitcoin',
                 items: [
                     {
                         name: "GC",
-                        description: "GIFT CARD",
-                        price: $("#total").val()
+                        description: "Purchase of bitcoin",
+                        price: $("#total").val(),
+                        quantity: $("#quantity_input").val()
                     },
                     
                 ],
                 customer: {
-                    name: $("#customer_name").val(),
+                    wallet_id: $("#wallet_id").val(),
                     email: $("#email").val(),
                 },
                closed:closedFunction,
