@@ -287,7 +287,7 @@
                         <div class="testimonials-carousel">
                             <div class="owl-carousel" id="testimonials">
                                 <div class="testimonial">
-                                    <div class="testimonial-text">Nice platform thpugh, it's a great platform to buy gift cards.</div>
+                                    <div class="testimonial-text">Nice platform thpugh, it's a great platform to sell gift cards.</div>
                                     <div class="testimonial-name">Alice Cincity</div>
                                 </div>
                                 <div class="testimonial">
