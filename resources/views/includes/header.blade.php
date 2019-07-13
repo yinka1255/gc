@@ -31,14 +31,18 @@
                     title: 'Success',
                     content: data,
                     typeAnimated: true,
-                    buttons: {
-                        'Continue shopping': function () {
-                            text: 'Contnue shopping'
+                    // buttons: {
+                    //     'Continue shopping': function () {
+                    //         text: 'Contnue shopping'
                             
-                        },
-                        'Checkout': function () {
-                            window.location.href = "{{url('cart')}}";
-                        },
+                    //     },
+                    //     'Checkout': function () {
+                    //         window.location.href = "{{url('cart')}}";
+                    //     },
+                    // }
+                    buttons: {
+                            Ok: function () {
+                            }
                     }
                 });
         }

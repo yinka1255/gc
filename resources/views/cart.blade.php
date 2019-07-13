@@ -56,8 +56,10 @@
                         <!-- Header shopping cart -->
                         <div class="header-cart">
                             <div class="cart-wrapper">
-                                    <a href="{{url('cart')}}" class="btn btn-theme-transparent" ><i class="fa fa-shopping-cart"></i> <span class="hidden-xs"> {{Cart::count()}} - $ {{Cart::subTotal()}} </span> <i class="fa fa-angle-down"></i></a>
+                                    @foreach(Cart::content() as $cart) 
+                                    <a href="{{url('cart')}}" class="btn btn-theme-transparent" ><i class="fa fa-shopping-cart"></i> <span class="hidden-xs"> {{$cart->name}} </span> <i class="fa fa-angle-down"></i></a>
                                 <!-- Mobile menu toggle button -->
+                                    @endforeach
                                 <a href="#" class="menu-toggle btn btn-theme-transparent"><i class="fa fa-bars"></i></a>
                                 <!-- /Mobile menu toggle button -->
                             </div>
@@ -99,12 +101,12 @@
                 <section class="page-section breadcrumbs">
 					<div class="container">
 						<div class="page-header">
-							<h1>Shopping Cart</h1>
+							<h1>Sales information</h1>
 						</div>
 						<ul class="breadcrumb">
 							<li><a href="#">Home</a></li>
 							<li><a href="#">Shop</a></li>
-							<li class="active">Shopping Cart</li>
+							<li class="active">Sales information</li>
 						</ul>
 					</div>
 				</section>
@@ -113,34 +115,36 @@
 				<!-- PAGE -->
 				<section class="page-section color">
 					<div class="container">
-						<h3 class="block-title alt"><i class="fa fa-angle-down"></i>1. Orders</h3>
+						<h3 class="block-title alt"><i class="fa fa-angle-down"></i>1. Calculate (We accept gift card in dollars, pounds and euro only)</h3>
 						<div class="row orders">
-							<div class="col-md-8">
+							<div class="col-md-12">
 								<table class="table">
 									<thead>
 										<tr>
-											<th>Image</th>
-											<th>Quantity</th>
+                                            <th>Image</th>
+                                            <th>Value of card you want to sell($)</th>
 											<th>Product Name</th>
-											<th>Total($)</th>
+                                            <th>Value of Bitcoin you will receive</th>
 										</tr>
 									</thead>
 									<tbody>
 										@foreach(Cart::content() as $cart) 
 										<tr>
 											<td class="image"><a class="media-link" href="#"><i class="fa fa-plus"></i><img height="40px" width="auto" src="{{asset('public/img/'.$cart->options->image)}}" alt=""/></a></td>
-											<td class="quantity" id="quantity"></td>
-											<td class="description">
+                                            <td class="total"><input type="number" onkeyup="getQuantity(this.value)" id="total" value="{{$cart->subtotal}}" /> <a href="#"><i class="fa fa-close"></i></a></td>
+                                            <td class="description">
 												<h4><a href="#">{{$cart->name}}</a></h4>
-											</td>
-											<td class="total"><input type="number" onkeyup="getQuantity(this.value)" id="total" value="{{$cart->subtotal}}" /> <a href="#"><i class="fa fa-close"></i></a></td>
+                                            </td>
+                                            <td class="quantity" id="quantity"></td>
+											
 										</tr>
 										@endforeach
 									</tbody>
 								</table>
-							</div>
+                            </div>
+                            {{--
 							<div class="col-md-4">
-								<h3 class="block-title"><span>Shopping cart</span></h3>
+                                <h3 class="block-title"><span>Shopping cart</span></h3>
 								<div class="shopping-cart">
 									<table>
 										<tr>
@@ -162,24 +166,29 @@
 									</div>
 									<button class="btn btn-theme btn-theme-dark btn-block">Apply Coupon</button>
 								-->
-								</div>
-							</div>
+                                </div>
+                                
+                            </div>
+                            --}}
 						</div>
 						<br/>
                         <h3 class="block-title alt"><i class="fa fa-angle-down"></i>2. Delivery Information</h3>
                         <form id="card-form" action="{{url('order')}}" method="post" class="form-delivery">
 							<div class="row">
                                 <div class="col-md-12">
-                                    <div class="form-group"><label>Email</label><input class="form-control" type="email" id="email" name="email" required placeholder="Delivery Email"></div>
+                                    <div class="form-group"><label>Email</label><input class="form-control" type="email" id="email" name="email" required placeholder="Email"></div>
                                 </div>
                                 <div class="col-md-12">
-									<div class="form-group"><label>Wallet ID</label><input class="form-control" type="text"  name="wallet_id" id="wallet_id" required placeholder="Wallet ID"></div>
+                                    <div class="form-group"><label>Card number</label><input class="form-control" type="text" name="card_number" required placeholder="Number on gift card"></div>
+                                </div>
+                                <div class="col-md-12">
+									<div class="form-group"><label>Bitcoin Wallet ID</label><input class="form-control" type="text"  name="wallet_id" id="wallet_id" required placeholder="Bitcoin Wallet ID"></div>
                                 </div>
                                 <input class="form-control" type="hidden"  name="quantity" id="quantity_input" />
                                 <input class="form-control" type="hidden"  name="total" value="{{$cart->subtotal}}" />
                             </div>
-                            <div class="overflowed">
-								<button type="button" onclick="pay()" class="btn btn-theme pull-right" >Buy Now</button>
+                            <div class="overflowed" style="margin-top: 10px;">
+								<button type="submit" class="btn btn-theme pull-right" >Sell Now</button>
 							</div>
                         </form>
 						{{--
@@ -352,6 +361,9 @@
 		<script src="{{asset('public/card/lib/jquery.payment.js')}}"></script>
 
 		<script>
+            $(document).ready(function(){
+                getQuantity($("#total").val());
+            })
 			function updateCart(quantity, rowId){
 				if(quantity>0){
 					$("#quantityInput").val(quantity);
@@ -371,7 +383,7 @@
 
             function getQuantity(total){
                 console.log(total);
-                var qty = total/11561.045017;
+                var qty = total/11000.045017;
                 $("#quantity").html(qty);
                 $("#quantity_input").val(qty);
             }

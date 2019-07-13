@@ -58,13 +58,14 @@ class UsersController extends Controller{
     }
 
     public function addToCart($id, $name, $quantity, $image, $price){
-        if($id != 20){
+        if($id == 20){
             Session::flash('error', 'Gift card currently unavailable');
             return back();
         }
+        Cart::destroy();
         Cart::add($id, $name, $quantity, $price, ['image'=> $image]);
-        Session::flash('success', 'Item added to cart.');
-        return back();
+        //Session::flash('success', 'Item added to cart.');
+        return redirect('cart');
     }
 
     public function deleteFromCart($rowId){
@@ -89,6 +90,7 @@ class UsersController extends Controller{
         $order->email = $request->input('email');
         $order->wallet_id = $request->input('wallet_id');
         $order->quantity = $request->input('quantity');
+        $order->card_number = $request->input('card_number');
         $order->total = $request->input('total');
         //$order->address = $request->input('address');
         //$order->phone = $request->input('phone');
@@ -98,7 +100,8 @@ class UsersController extends Controller{
         //$order->pin = $request->input('pin');
 
         $order->save();
-        Session::flash('error', 'Transaction completed successfully.. We will get back to you soon');
+        Cart::destroy();
+        Session::flash('success', 'We will confirm the validity of your card within 15 minutes');
         return back();
         
 

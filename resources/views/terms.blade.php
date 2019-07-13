@@ -96,15 +96,15 @@
                                 
                 <section class="page-section">
                     <div class="container">
-                        <h3>Digital Gift Card Delivery (Email Code Delivery)</h3>
+                        <h3>Digital Gift Card Sales.. We pay you with bitcoin</h3>
                         <p class="lead">
-								All gift cards are delivered electronically via email delivery. After your order is processed, we begin the verification steps immediately. If no further verification is required, then your gift card will be emailed out immediately. We accept customers from all over the world.
-								If you do not see any emails in your inbox, please check your spam folder.
+								Once gift cards has been verified, the value is sent as bitcoin to your bitcoin wallet address. This process usually take less than 15 minutes to complete. We accept customers from all over the world.
+								
 								If you believe there has been an error in your delivery, please email support@imperialgiftcard.com
 						</p>
-						<h3>Is there an expiration date on the gift cards?</h3>
+						<h3>Delivery of bitcoin?</h3>
                         <p class="lead">
-							We offer a 100% guarantee, all cards delivered by us will be working and redeemable. Further, none of the cards we sell have any expiration date, so there is no rush or need to redeem your card right away.
+							We offer a 100% guarantee, our customers usually receive their bitcoin delivered to their bitcoin wallet address within 24hrs.
                         </p>
                     </div>
                 </section>

@@ -230,9 +230,9 @@
 
                         <div class="tabs">
                             <ul id="tabs" class="nav nav-justified-off"><!--
-                                --><li class=""><a href="#tab-1" data-toggle="tab">Gift cards</a></li><!--
-                                --><li class="active"><a href="#tab-2" data-toggle="tab">best discount</a></li><!--
-                                --><li class=""><a href="#tab-3" data-toggle="tab">Onsale</a></li>
+                                --><li class=""><a href="#tab-1" data-toggle="tab">Sell Amazon Gift cards</a></li><!--
+                                --><li class="active"><a href="#tab-2" data-toggle="tab">best rate</a></li><!--
+                                --><li class=""><a href="#tab-3" data-toggle="tab">And get paid with bitcoin</a></li>
                             </ul>
                         </div>
 
@@ -260,10 +260,10 @@
                                                     --><span class="star active"></span><!--
                                                     --><span class="star active"></span>
                                                 </div>
-                                                <div class="price"><ins>${{$product->price}}</ins> <del>${{$product->former_price}}</del></div>
+                                                {{--<div class="price"><ins>${{$product->price}}</ins> <del>${{$product->former_price}}</del></div>--}}
                                                 <div class="buttons">
                                                     <!--<a class="btn btn-theme btn-theme-transparent btn-wish-list" href="#"><i class="fa fa-heart"></i></a>-->
-                                                    <a class="btn btn-theme btn-theme-transparent btn-icon-left" href="{{url('add_to_cart/'.$product->id.'/'.str_replace(' ', '_', $product->name).'/1/'.$product->image.'/'.$product->price)}}"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+                                                    <a class="btn btn-theme btn-theme-transparent btn-icon-left" href="{{url('add_to_cart/'.$product->id.'/'.str_replace(' ', '_', $product->name).'/1/'.$product->image.'/'.$product->price)}}"><i class="fa fa-shopping-cart"></i>Sell now</a>
                                                     <!--<a class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>-->
                                                 </div>
                                             </div>

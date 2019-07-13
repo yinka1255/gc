@@ -5,8 +5,8 @@
         <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Imperial gift shop | Itunes and Amazon Card with 20% discount </title>
-        <meta name="description" content="Legit Amazon and Itunes Gift Cards. Trusted Online Store. Buy amazon and itunes gift cards at 20% discount delivered to your email instantly. 100% safe and secure">
+        <title>Sell Itunes, Google Play, Walmart and Amazon Card and get paid with bitcoin </title>
+        <meta name="description" content="We buy Amazon and Itunes Gift Cards and we pay you with bitcoin. Trusted Online Store. Sell amazon and itunes gift cards  to us and get your bitcoin delivered to ypur wallet within 15mins. 100% safe and secure">
         @include("includes.header")
         <!-- Favicon -->
         
@@ -109,9 +109,9 @@
                                             <div class="div-table">
                                                 <div class="div-cell">
                                                     <div class="caption-content">
-                                                        <h2 class="caption-title">Amazon & Itunes Gift Card</h2>
-                                                        <h3 class="caption-subtitle"><span>20% Discount</span></h3>
-                                                        <h2 class="caption-title">Delivered to your E-mail instantly</h2>
+                                                        <h2 class="caption-title">Amazon, Itunes, Google play and Walmart Gift Card</h2>
+                                                        <h3 class="caption-subtitle"><span>Best rate</span></h3>
+                                                        <h2 class="caption-title">Bitcoin delivered to your wallet instantly</h2>
                                                         <p class="caption-text">
                                                             <a class="btn btn-theme" href="{{url('amazon')}}">Buy Amazon Cards</a>
                                                             <a class="btn btn-theme" href="{{url('itunes')}}">Buy Itunes Cards</a>
@@ -253,7 +253,7 @@
                                             </div>
                                             <div class="caption text-center">
                                                 <h4 class="caption-title"><a href="product-details.html">{{$product->name}}</a></h4>
-                                                <p style="color: brown;">({{$product->qty}} units available)</p>
+                                                <p style="color: green;">(We currently buying)</p>
                                                 <div class="rating">
                                                     <span class="star"></span><!--
                                                     --><span class="star active"></span><!--
@@ -261,10 +261,10 @@
                                                     --><span class="star active"></span><!--
                                                     --><span class="star active"></span>
                                                 </div>
-                                                <div class="price"><ins>${{$product->price}}</ins> <del>${{$product->former_price}}</del></div>
+                                                {{--<div class="price"><ins>${{$product->price}}</ins> <del>${{$product->former_price}}</del></div>--}}
                                                 <div class="buttons">
                                                     <!--<a class="btn btn-theme btn-theme-transparent btn-wish-list" href="#"><i class="fa fa-heart"></i></a>-->
-                                                    <a class="btn btn-theme btn-theme-transparent btn-icon-left" href="{{url('add_to_cart/'.$product->id.'/'.str_replace(' ', '_', $product->name).'/1/'.$product->image.'/'.$product->price)}}"><i class="fa fa-shopping-cart"></i>Add to Cart</a>
+                                                    <a class="btn btn-theme btn-theme-transparent btn-icon-left" href="{{url('add_to_cart/'.$product->id.'/'.str_replace(' ', '_', $product->name).'/1/'.$product->image.'/'.$product->price)}}"><i class="fa fa-shopping-cart"></i>Sell now</a>
                                                     <!--<a class="btn btn-theme btn-theme-transparent btn-compare" href="#"><i class="fa fa-exchange"></i></a>-->
                                                 </div>
                                             </div>
