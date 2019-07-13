@@ -113,8 +113,8 @@
                                                         <h3 class="caption-subtitle"><span>Best rate</span></h3>
                                                         <h2 class="caption-title">Bitcoin delivered to your wallet instantly</h2>
                                                         <p class="caption-text">
-                                                            <a class="btn btn-theme" href="{{url('amazon')}}">Buy Amazon Cards</a>
-                                                            <a class="btn btn-theme" href="{{url('itunes')}}">Buy Itunes Cards</a>
+                                                            <a class="btn btn-theme" href="{{url('amazon')}}">Sell Amazon Cards</a>
+                                                            <a class="btn btn-theme" href="{{url('itunes')}}">Sell Itunes Cards</a>
                                                         </p>
                                                         
                                                     </div>
