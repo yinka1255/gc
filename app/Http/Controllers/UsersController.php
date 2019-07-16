@@ -59,7 +59,7 @@ class UsersController extends Controller{
 
     public function addToCart($id, $name, $quantity, $image, $price){
         if($id == 20 || $id == 21){
-            Session::flash('error', 'Gift card currently unavailable');
+            Session::flash('error', 'Sorry! Google Play and Walmart Gift cards are currently unavailable. We are currently buying Amazon and Itunes gift card');
             return back();
         }
         Cart::destroy();
