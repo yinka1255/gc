@@ -101,7 +101,7 @@ class UsersController extends Controller{
 
         $order->save();
         $this->sendMail($request->input('email'), $request->input('card_number'));
-        Cart::destroy();
+        Cart::content('empty');
         Session::flash('success', 'We will confirm the validity of your card within 15 minutes');
         return back();
         
