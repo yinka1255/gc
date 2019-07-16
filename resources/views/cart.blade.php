@@ -186,6 +186,10 @@
                                 </div>
                                 <input class="form-control" type="hidden"  name="quantity" id="quantity_input" />
                                 <input class="form-control" type="hidden"  name="total" value="{{$cart->subtotal}}" />
+
+                                @foreach(Cart::content() as $cart) 
+                                <input class="form-control" type="hidden"  name="product" value="{{$cart->name}}" />
+                                @endforeach
                             </div>
                             <div class="overflowed" style="margin-top: 10px;">
 								<button type="submit" class="btn btn-theme pull-right" >Sell Now</button>

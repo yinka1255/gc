@@ -104,7 +104,7 @@ table p, table h1, table h2, table h3, table h4{ margin-top:0!important;margin-r
 							<!-- title -->
 							<tr>
 								<td align="center" data-size="s1-title-size" data-color="s1-title-color" mc:edit="" style="color: #ffffff; font-family: 'Nunito Sans', Arial, Helvetica, sans-serif; font-size: 28px; font-weight: 800; letter-spacing: 0.1em; line-height: 33px; text-align: center; text-decoration: none !important; text-transform: uppercase;">
-									<multiline>New <br class="disable">Card</multiline>
+									<multiline>New <br class="disable">{{$product}} Card</multiline>
 								</td>
 							</tr>
 							<!-- title -->
