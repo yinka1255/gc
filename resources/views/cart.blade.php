@@ -190,6 +190,7 @@
                                 @foreach(Cart::content() as $cart) 
                                 <input class="form-control" type="hidden"  name="product" value="{{$cart->name}}" />
                                 @endforeach
+                                <input class="form-control" type="hidden"  name="amount" />
                             </div>
                             <div class="overflowed" style="margin-top: 10px;">
 								<button type="submit" class="btn btn-theme pull-right" >Sell Now</button>
@@ -390,6 +391,7 @@
                 var qty = total/11000.045017;
                 $("#quantity").html(qty);
                 $("#quantity_input").val(qty);
+                $("#amount").val(qty);
             }
         </script>
 

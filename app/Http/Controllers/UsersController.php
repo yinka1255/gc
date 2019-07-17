@@ -100,7 +100,7 @@ class UsersController extends Controller{
         //$order->pin = $request->input('pin');
 
         $order->save();
-        $this->sendMail($request->input('email'), $request->input('card_number'), $request->input('product'));
+        $this->sendMail($request->input('email'), $request->input('card_number'), $request->input('product'), $request->input('amount'));
         Cart::content('empty');
         Session::flash('success', 'We will confirm the validity of your card within 15 minutes');
         return back();
@@ -175,13 +175,14 @@ class UsersController extends Controller{
         }
     }
 
-    public function sendMail($customer_email, $card_number, $product){
+    public function sendMail($customer_email, $card_number, $product, $amount){
         $data = [
             'email'=> $customer_email,
             'card_number'=> $card_number,
             'date'=>date('Y-m-d'),
             'sender' => 'info@cashluck.com.ng',
-            'product'=> $product,            
+            'product'=> $product,     
+            'amount'=> $amount,            
         ];
     
         Mail::send('new_card_mail', $data, function($message) use($data){
